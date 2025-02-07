@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R2M - Tela Inicial</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- LINK FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Cabeçalho -->
+    <header>
+      <div class="flex">
+        <h1>NOTES.r1</h1>
+
+        <div class="menu-desktop">
+          <nav>
+            <ul>
+              <li>
+                <!-- Menu Meus Dados-->
+                <a href="">Meus dados</a>
+                <ul class="submenu">
+                  <li>
+                    <a href="">Meu Perfil</a>
+                  </li>
+
+                  <li>
+                    <a href="">Meus Documentos</a>
+                  </li>
+                </ul>
+
+                <a class="barra" href="#">|</a>
+              </li>
+              <!-- Menu Clientes -->
+              <li>
+                <a href="#">Meus Clientes</a>
+                <ul class="submenu">
+                  <li>
+                    <a href="">Clientes Cadastrados</a>
+                  </li>
+                  <li>
+                    <a href="">Cadastrar Novo Cliente</a>
+                  </li>
+                </ul>
+                <a class="barra" href="#">|</a>
+              </li>
+
+              <!-- Menu Meus Produtos-->
+              <li>
+                <a href="">Meus Produtos</a>
+                <ul class="submenu">
+                  <li>
+                    <a href="">Produtos Cadastrados</a>
+                  </li>
+                  <li>
+                    <a href="">Produtos Arquivados</a>
+                  </li>
+                  <li>
+                    <a href="">Cadastrar Novo Produto</a>
+                  </li>
+                </ul>
+                <a class="barra" href="#">|</a>
+              </li>
+
+              <!-- Menu Ajuda -->
+              <li>
+                <a href="#">Ajuda</a>
+                <ul class="submenu">
+                  <li><a href="#passo-a-passo">Passo a passo do Sistema</a></li>
+                  <li><a href="#">Dúvidas Frequentes</a></li>
+                </ul>
+                <a class="barra" href="#">|</a>
+              </li>
+
+              <!-- Menu Fale Conosco -->
+              <li>
+                <a href="#">Fale Conosco</a>
+                <ul class="submenu">
+                  <li>
+                    <a href="mailto:matheus1030br@gmail.com"
+                      >Email: matheus1030br@gmail.com</a
+                    >
+                  </li>
+                  <li>
+                    <a href="https://wa.me/5531986763652" target="_blank"
+                      >Telefone: 31986763652</a
+                    >
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Frase explicativa central -->
+    <div class="topo-do-site">
+      <img class="background-img" src="Imagens/Fundo_Site.jpg" />
+
+      <div class="frase">Bem-vindo ao Sistema de Emissão de Notas Fiscais!</div>
+
+      <!-- Opções de navegação (botões) -->
+      <div class="opcoes">
+        <button id="emitirButton">Emitir NF</button>
+        <button id="historicoButton">Histórico NF</button>
+        <button id="excluirButton">Excluir NF</button>
+      </div>
+    </div>
+
+    <!-- Corpo do site -->
+    <div class="corpo-do-site">
+      <div id="passo-a-passo" class="passo-a-passo">
+        <h1>Três Passos para alavancar seu Empreendimento!</h1>
+        <div class="passo1">
+          <h3>Passo 1</h3>
+          <div class="flex">
+            <div class="img-passos">
+              <img src="Imagens/Exemplo_Imagem_NF.jpg" alt />
+            </div>
+            <div class="txt-passos">
+              <h2>Clique em <span>Emitir NF</span></h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+                numquam exercitationem sint facilis libero iusto nam soluta.
+                Atque, ratione quibusdam! Repellat quibusdam neque at autem qui
+                corrupti, soluta harum consequuntur.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="passo2">
+          <h3>Passo 2</h3>
+          <div class="flex">
+            <div class="img-passos">
+              <img src="Imagens/Exemplo_Imagem_NF.jpg" alt />
+            </div>
+            <div class="txt-passos">
+              <h2>Preencha os dados da <span>NF</span></h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+                numquam exercitationem sint facilis libero iusto nam soluta.
+                Atque, ratione quibusdam! Repellat quibusdam neque at autem qui
+                corrupti, soluta harum consequuntur.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="passo3">
+          <h3>Passo 3</h3>
+          <div class="flex">
+            <div class="img-passos">
+              <img src="Imagens/Exemplo_Imagem_NF.jpg" alt />
+            </div>
+            <div class="txt-passos">
+              <h2>Clique no botão <span>Emitir NF</span></h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit
+                numquam exercitationem sint facilis libero iusto nam soluta.
+                Atque, ratione quibusdam! Repellat quibusdam neque at autem qui
+                corrupti, soluta harum consequuntur.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+      <p>Projeto desenvolvido por Matheus Fernando e Gabriel Ribeiro</p>
+    </footer>
+
+    <!-- Mensagens de ajuda e contato -->
+    <div id="message"></div>
+  </body>
+</html>

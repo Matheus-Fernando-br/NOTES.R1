@@ -1,0 +1,273 @@
+/* Estilo global */
+
+/*CORES*/
+:root {
+  --cor-textos: rgb(0, 0, 0);
+  --cor-fundo-texto: #fff;
+  --cor-fundo-cabecalho: linear-gradient(10deg, #000000, #313131);
+  --cor-txt-cabecalho: #fff;
+  --cor-principal: #4e4f50;
+  --cor-secundaria: linear-gradient(50deg, #000000, #313131);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-fundo-texto);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+html {
+  font-size: 48.5%; /* DEFINIR ESCALA DE TAMANHO DO SITE */
+  scroll-behavior: smooth;
+}
+
+/* Cabeçalho */
+header {
+  background: var(--cor-fundo-cabecalho);
+  color: var(--cor-txt-cabecalho);
+  text-align: left;
+}
+
+header h1 {
+  font-size: 7rem;
+  font-weight: bold;
+  font-family: "Teko", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  padding-left: 3rem;
+  transition: 0.2s ease;
+}
+
+header h1:hover {
+  transform: scale(1.02);
+}
+
+/* Menu */
+.menu-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  flex: 1;
+}
+
+.menu-desktop ul {
+  justify-content: center;
+  list-style: none;
+}
+
+.menu-desktop ul li {
+  display: inline-block;
+  padding: 0 1rem;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.menu-desktop ul li a {
+  color: var(--cor-txt-cabecalho);
+  font-family: "Prompt", serif;
+  font-style: normal;
+  text-decoration: none;
+  font-size: 2rem;
+  margin: 0 1.5rem;
+  transition: 0.2s ease;
+}
+
+.menu-desktop ul li:hover {
+  transform: scale(1.04);
+  transform: translateY(0.2rem);
+}
+
+/* Submenu */
+.submenu {
+  display: block; /* O submenu está sempre no fluxo, mas controlado por visibilidade */
+  position: absolute; /* Posiciona abaixo do item principal */
+  top: calc(100% + 0.2rem); /* Posiciona o submenu logo abaixo do item pai */
+  left: 0;
+  background-color: var(--cor-principal); /* Fundo do submenu */
+  padding: 1rem; /* Espaçamento interno no submenu */
+  border-radius: 0.8rem; /* Bordas arredondadas */
+  z-index: 10; /* Garante que fique acima de outros elementos */
+  opacity: 0; /* Submenu inicialmente invisível */
+  visibility: hidden; /* Esconde visualmente o submenu */
+  pointer-events: none; /* Impede interações quando invisível */
+  transition: opacity 0.3s ease, visibility 0.3s ease; /* Suaviza a transição de visibilidade */
+}
+
+.submenu li {
+  display: block; /* Exibe os itens em bloco no submenu */
+}
+
+.submenu li a {
+  display: block; /* Faz com que todo o item seja clicável */
+  color: var(--cor-txt-cabecalho); /* Cor dos links no submenu */
+  font-size: 1.6rem; /* Ajusta o tamanho da fonte para melhor legibilidade */
+  white-space: nowrap; /* Impede que o texto quebre para uma nova linha */
+  padding: 1rem 2rem; /* Adiciona espaçamento interno aos itens */
+}
+
+.submenu li:hover a {
+  color: var(--cor-secundaria); /* Muda a cor no hover dos links do submenu */
+}
+
+/* Exibir o submenu ao passar o mouse no item principal ou sobre o próprio submenu */
+.menu-desktop ul li:hover .submenu,
+.menu-desktop ul li .submenu:hover {
+  opacity: 1; /* Torna o submenu visível ao passar o mouse no item principal ou nele mesmo */
+  visibility: visible;
+  pointer-events: auto; /* Permite interações quando visível */
+}
+
+/* TOPO DO SITE */
+.topo-do-site {
+  position: relative;
+  width: 100%;
+  height: 70rem; /* Altura do topo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Garante que o vídeo não ultrapasse os limites */
+}
+
+.background-img {
+  border-end-start-radius: 7rem;
+  border-end-end-radius: 7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz o vídeo cobrir todo o espaço, mantendo a proporção */
+  filter: brightness(0.5);
+  z-index: -1; /* Coloca o vídeo atrás do conteúdo */
+}
+
+/* Frase do Topo */
+.frase {
+  font-family: "Prompt", serif;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Fundo branco semi-transparente */
+  border-radius: 1rem;
+  color: var(--cor-textos);
+  z-index: -1;
+}
+
+/* Botões */
+.opcoes {
+  display: flex;
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  gap: 20rem; /* Espaçamento entre os botões */
+  padding-top: 40rem;
+}
+
+button {
+  padding: 2rem 4rem; /* Tamanho dos botões */
+  font-size: 4rem;
+  background: var(--cor-fundo-cabecalho);
+  font-family: "Teko", serif;
+  color: var(--cor-fundo-texto);
+  border: none;
+  border-radius: 1rem;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--cor-secundaria);
+  transform: scale(0.97);
+}
+
+/* PASSO A PASSO */
+.corpo-do-site {
+  padding: 10rem 6rem;
+  padding-top: 12rem;
+}
+
+/* IMAGEMNS PASSO A PASSO*/
+
+.img-passos img {
+  width: 50rem;
+  height: 30rem;
+  border-radius: 5rem;
+  border: none; /* Remove a borda sólida */
+  box-shadow: 0 0 3rem 0.3rem var(--cor-textos); /* Cria o efeito de desfoque com sombra */
+}
+
+/* TEXTOS PASSO A PASSO */
+
+.passo-a-passo h3 {
+  font-family: "Prompt", serif;
+  font-size: 2rem;
+  color: var(--cor-principal);
+  text-align: center;
+}
+
+.txt-passos h2 {
+  font-family: "Teko", serif;
+  font-size: 4rem;
+  color: var(--cor-textos);
+}
+
+.txt-passos p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2.5rem;
+  justify-items: baseline;
+  color: var(--cor-textos);
+}
+
+.passo-a-passo h1 {
+  font-weight: bold;
+  font-family: "Teko", serif;
+  font-size: 6rem;
+  text-align: center;
+  padding-bottom: 4rem;
+  color: var(--cor-textos);
+}
+
+/* PASSO 1  e PASSO 3*/
+.passo1 .flex,
+.passo3 .flex {
+  display: flex;
+  padding: 5rem 8rem;
+  padding-left: 45rem;
+  gap: 15rem;
+  padding-bottom: 16rem;
+}
+
+/* PASSO 2 */
+.passo2 .flex {
+  display: flex;
+  padding: 5rem 8rem;
+  padding-right: 30rem;
+  gap: 15rem;
+  padding-bottom: 16rem;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--cor-fundo-cabecalho);
+  font-family: "Prompt", serif;
+  color: var(--cor-txt-cabecalho);
+  text-align: center;
+  padding: 3.5rem;
+  margin-top: 4rem;
+  font-size: 2rem;
+}
