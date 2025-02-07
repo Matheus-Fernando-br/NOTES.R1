@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login - Sistema R2M</title>
+        <link rel="stylesheet" href="login.css" />
+    </head>
+    <body>
+        <div class="flex">
+
+            <div class="logo">
+                <h1>Notes.r1</h1>
+                <p>a project by R2M</p>
+            </div>
+
+            <div class="login-container">
+                <h2>Login</h2>
+
+                <form id="loginForm">
+                    <input type="text" id="username" placeholder="Usuário"
+                        required />
+                    <input type="password" id="password" placeholder="Senha"
+                        required />
+                    <button type="submit">Entrar</button>
+                </form>
+
+                <div class="cadastro-container">
+                    <div class="ou-container">
+                        <p>ou</p>
+                    </div>
+                    <button type="submit">Criar conta</button>
+                    <div class="txt-cadastro">
+                        <p>Ao se cadastrar, você concorda com os
+                            Termos, Condições e Políticas da notes.r1
+                            Política de Privacidade</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script>
+      document.getElementById("loginForm").addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        // Simulação de validação do login
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        if (username === "admin" && password === "1234") {
+            window.location.href = "index.html"; // Redireciona para a página principal
+        } else {
+          alert("Usuário ou senha inválidos.");
+        }
+      });
+    </script>
+    </body>
+</html>

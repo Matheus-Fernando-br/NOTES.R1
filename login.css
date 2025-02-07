@@ -1,0 +1,106 @@
+/* Estilo global */
+
+/*CORES*/
+:root {
+  --cor-textos: rgb(0, 0, 0);
+  --cor-fundo-texto: #fff;
+  --cor-fundo-cabecalho: linear-gradient(10deg, #000000, #313131);
+  --cor-principal-esc: #3b3b3b;
+  --cor-principal: #4e4f50;
+  --cor-secundaria: linear-gradient(50deg, #000000, #313131);
+}
+
+html {
+  font-size: 80%; /* DEFINIR ESCALA DE TAMANHO DO SITE */
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--cor-fundo-cabecalho);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70rem;
+}
+
+.flex {
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+}
+
+/* Container do formulário de login */
+
+/* Logo */
+
+.logo {
+  justify-items: center;
+  color: var(--cor-fundo-texto);
+}
+
+.logo h1 {
+  font-size: 10rem;
+  font-weight: bold;
+  font-family: "Teko", serif;
+}
+
+/* Login */
+.login-container {
+  background: var(--cor-fundo-texto);
+  padding: 3rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem var(--cor-principal);
+  text-align: center;
+  width: 45%;
+}
+
+.login-container h2 {
+  font-size: 4rem;
+  font-family: "Prompt", serif;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+input {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border: 0.2rem solid var(--cor-principal);
+  border-radius: 0.2rem;
+}
+
+button {
+  width: 100%;
+  font-size: 2rem;
+  padding: 1.5rem;
+  background-color: var(--cor-principal);
+  color: var(--cor-fundo-texto);
+  border: none;
+  border-radius: 0.1rem;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  background: var(--cor-principal-esc);
+  transform: scale(0.97);
+}
+
+/* Cadastro */
+.cadastro-container p {
+  font-size: 1.8rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 1.8rem;
+}
+.ou-container {
+}
